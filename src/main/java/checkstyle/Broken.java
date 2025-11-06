@@ -2,21 +2,23 @@ package checkstyle;
 
 public class Broken {
     private int sizeOfEmpty = 10;
-    String name;
-    public String surname;
-    public static final String VALUE = "";
+    private String name;
+    private String surname;
+    private static final String VALUE = "";
 
-    void echo() {
+    public Broken() { }
+
+    public void echo() {
     }
 
-    void media(Object obj) {
+    public void media(Object obj) {
         if (obj != null) {
             System.out.println(obj);
         }
     }
 
-    void method(int a, int b, int c, int d) {
+    public void method(int a, int b, int c, int d) {
     }
 
-    Broken() { }
+
 }
