@@ -7,18 +7,13 @@ public class Broken {
     private static final String VALUE = "";
 
     public Broken() { }
-
     public void echo() {
     }
-
     public void media(Object obj) {
         if (obj != null) {
             System.out.println(obj);
         }
     }
-
     public void method(int a, int b, int c, int d) {
     }
-
-
 }
