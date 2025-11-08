@@ -1,10 +1,9 @@
 package encapsulation;
 
 public class Shop {
-    static int firstNull;
 
     public static int indexOfNull(Product[] products) {
-
+        int firstNull = 0;
         for (int i = 0; i < products.length; i++) {
             Product product = products[i];
             if (product == null) {
