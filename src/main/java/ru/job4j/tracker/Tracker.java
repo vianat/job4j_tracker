@@ -59,8 +59,8 @@ public class Tracker {
     }
 
     public void delete(int id) {
-        if (id <= size) {
-            int index = indexOf(id);
+        int index = indexOf(id);
+        if (index != -1) {
             System.arraycopy(items, index, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
