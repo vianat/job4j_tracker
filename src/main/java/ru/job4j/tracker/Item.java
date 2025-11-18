@@ -42,4 +42,15 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
+
+        return "Item{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + ", created=" + created.format(FORMATTER)
+                + '}';
+    }
 }
