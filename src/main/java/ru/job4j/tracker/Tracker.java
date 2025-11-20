@@ -31,28 +31,24 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-
         int index = indexOf(id);
-        /* Если индекс найден возвращаем item, иначе null */
         return index != -1 ? items[index] : null;
     }
 
     private int indexOf(int id) {
         int result = -1;
-        if (id >= 0 && id <= 100) {
             for (int index = 0; index < size; index++) {
                 if (items[index].getId() == id) {
                     result = index;
-                    break;
+                    return result;
                 }
             }
-        }
         return result;
     }
 
     public boolean replace(int id, Item item) {
         int index = -1;
-        if (id >= 0 && id <= 100) {
+        if (id >= 0) {
             index = indexOf(id);
         }
         if (index != -1) {
@@ -65,7 +61,7 @@ public class Tracker {
 
     public void delete(int id) {
         int index = indexOf(id);
-        if (index != -1 && index <= 100) {
+        if (index != -1) {
             System.arraycopy(items, index, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
