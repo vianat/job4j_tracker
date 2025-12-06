@@ -18,5 +18,12 @@ public class Reduce {
         Reduce reduce = new Reduce();
         reduce.to(array);
         reduce.print();
+
+        long startTime = System.currentTimeMillis();
+        StringBuilder builder = new StringBuilder("Job4j");
+        for (int index = 0; index < 9999; index++) {
+            builder.append(index);
+        }
+        System.out.println("Миллисекунд: " + (System.currentTimeMillis() - startTime));
     }
 }
