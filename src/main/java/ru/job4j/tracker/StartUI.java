@@ -24,7 +24,7 @@ public class StartUI {
                 "Удалить заявку", "Показать заявку по id", "Показать заявки по имени",
                 "Завершить программу"
         };
-        for(int i = 0; i < menu.length; i++) {
+        for (int i = 0; i < menu.length; i++) {
             System.out.println(i + ". " + menu[i]);
         }
     }
