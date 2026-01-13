@@ -59,7 +59,7 @@ public class StartUI {
 
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Редактирование заявки ===");
-        int id = Integer.parseInt(input.askStr("Введите id: "));
+        int id = Integer.parseInt(input.askStr("Enter id: "));
         String name = input.askStr("Введите название: ");
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
@@ -71,7 +71,7 @@ public class StartUI {
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Удаление заявки ===");
-        int id = Integer.parseInt(input.askStr("Введите id: "));
+        int id = Integer.parseInt(input.askStr("Enter id: "));
         Item item = tracker.findById(id);
         tracker.delete(id);
         System.out.println(item != null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
@@ -79,7 +79,7 @@ public class StartUI {
 
     public static void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Вывод заявки по id ===");
-        int id = Integer.parseInt(input.askStr("Введите id: "));
+        int id = Integer.parseInt(input.askStr("Enter id: "));
         Item item = tracker.findById(id);
         if (item != null) {
             System.out.println(item);
@@ -90,7 +90,7 @@ public class StartUI {
 
     public static void findItemByName(Input input, Tracker tracker) {
         System.out.println("=== Вывод заявок по имени ===");
-        String name = input.askStr("Введите название: ");
+        String name = input.askStr("Введите имя: ");
         Item[] items = tracker.findByName(name);
         if (items.length > 0) {
             for (Item item : items) {
